@@ -1,13 +1,13 @@
 package personnages;
 
-public class humain {
-	private String nom;
-	private String boisson_fav;
-	private int argent;
+public class Humain {
+	protected String nom;
+	protected String boisson_fav;
+	protected int argent;
 	
 	
 	
-	public humain(String nom, String boisson_fav, int argent) {
+	public Humain(String nom, String boisson_fav, int argent) {
 		this.nom = nom;
 		this.boisson_fav = boisson_fav;
 		this.argent = argent;
@@ -61,7 +61,7 @@ public class humain {
 	}
 	
 	public static void main (String[] args) {
-		humain Silas = new humain("Silas", "eau",100);
+		Humain Silas = new Humain("Silas", "eau",100);
 		Silas.direBonjour();
 		Silas.boire();
 		Silas.acheter(110);
