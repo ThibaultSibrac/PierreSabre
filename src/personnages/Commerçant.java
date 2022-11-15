@@ -2,15 +2,17 @@ package personnages;
 import personnages.Humain;
 
 public class Commerçant extends Humain {
-	public Commerçant(String nom, String boisson_fav, int argent) {
+	
+	
+	public Commerçant(String nom, String boissonFavorite, int argent) {
 		super(nom, "thé" ,argent);
 	}
 	public String prendreParole() {
-		return "Le Commerçant " + nom + " : ";	
+		return "Le Commerçant " + getNom() + " : ";	
 	}
 	public int seFaireExtorquer() {
-		int argentPerdu = argent;
-		argent = 0;
+		int argentPerdu = getArgent();
+		perdreArgent(getArgent());
 		parler("J'ai tout perdu ! Le monde est injuste");
 		return argentPerdu;
 		
